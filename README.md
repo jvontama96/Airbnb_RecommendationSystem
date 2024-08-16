@@ -68,7 +68,7 @@ The recommendation system is built using various techniques to ensure the best p
   <li><b>Country Comparison:</b> Evaluating the consistency of country preferences between user data and recommendations.</li>
 </ul>
 
-<h2>Streamlit Simulation</h2>
+<h2>Streamlit Simulation: <a href="https://github.com/jvontama96/AirBnB_RecommendationSystem/tree/main/Streamlit%20File">GitHub Repository</a></h2>
 
 <p>
 A Streamlit application was created to allow users to interactively explore:
