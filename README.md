@@ -85,7 +85,7 @@ A Streamlit application was created to allow users to interactively explore:
   <li><b>Clone the Repository:</b></li>
 </ol>
 <pre>
-<code>git clone https://github.com/yourusername/AirBnB_RecommendationSystem.git</code>
+<code>git clone https://github.com/yourusername/Airbnb_RecommendationSystem.git</code>
 </pre>
 
 <ol start="2">
