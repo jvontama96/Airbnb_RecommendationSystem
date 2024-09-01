@@ -70,10 +70,21 @@ The recommendation system is built using various techniques to ensure the best p
 
 <h3>8. Result and Evaluation</h3>
 <ul>
-  <li><b>8.1 Cluster Distribution Comparison:</b> Analyzing the distribution of clusters in user data versus recommended listings to assess relevance.</li>
-  <li><b>Cluster Distribution Comparison:</b> Analyzing the distribution of clusters in user data versus recommended listings to assess relevance.</li>
-  <li><b>Price Comparison:</b> Comparing the price distribution between user data and recommended listings to ensure alignment with user budgets.</li>
-  <li><b>Country Comparison:</b> Evaluating the consistency of country preferences between user data and recommendations.</li>
+  <li><b>8.1 Weighted Rating Result</b></li>
+  <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Result_1.jpg?raw=true" alt="Weighted Rating Result" style="width:100%; max-width:600px;">
+
+  <li><b>8.2 Content Based Filtering</b></li>
+  <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Result_2.jpg?raw=true" alt="Content Based Filtering Result" style="width:100%; max-width:600px;">
+
+  <li><b>8.3 K-Means Clustering</b></li>
+  <ul>
+    <li><b>Cluster Distribution Comparison:</b> Analyzing the distribution of clusters in user data versus recommended listings to assess relevance.</li>
+    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_1.jpg?raw=true" alt="Cluster Distribution Comparison" style="width:100%; max-width:600px;">
+    <li><b>Price Comparison:</b> Comparing the price distribution between user data and recommended listings to ensure alignment with user budgets.</li>
+    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_2.jpg?raw=true" alt="Price Comparison" style="width:100%; max-width:600px;">
+    <li><b>Country Comparison:</b> Evaluating the consistency of country preferences between user data and recommendations.</li>
+    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_3.jpg?raw=true" alt="Country Comparison" style="width:100%; max-width:600px;">
+  </ul>
 </ul>
 
 <h2>Streamlit Simulation: <a href="https://github.com/jvontama96/AirBnB_RecommendationSystem/tree/main/Streamlit%20File">Directory</a></h2>
