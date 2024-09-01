@@ -25,6 +25,7 @@ The recommendation system is built using various techniques to ensure the best p
   <li><b>Feature Engineering:</b> Creating new features like <code>family_suitability</code>, <code>safety</code>, and <code>natural_condition</code> to enhance the recommendation system.</li>
 </ul>
 
+<a href="https://github.com/jvontama96/Airbnb_RecommendationSystem/tree/main/EDA_Image" target="_blank">
 <h3>2. Exploratory Data Analysis (EDA)</h3>
 <ul>
   <li><b>Visualization:</b> Analyzing the distribution of key variables (<code>price_fix</code>, <code>rating</code>, <code>reviews</code>) using scatter plots, box plots, and bar charts.</li>
@@ -61,7 +62,7 @@ The recommendation system is built using various techniques to ensure the best p
   <li><b>Cluster-Based Recommendations:</b> Providing recommendations from within the same cluster to ensure relevance to user preferences.</li>
 </ul>
 
-<h3>8. Evaluation</h3>
+<h3>8. Result and Evaluation</h3>
 <ul>
   <li><b>Cluster Distribution Comparison:</b> Analyzing the distribution of clusters in user data versus recommended listings to assess relevance.</li>
   <li><b>Price Comparison:</b> Comparing the price distribution between user data and recommended listings to ensure alignment with user budgets.</li>
