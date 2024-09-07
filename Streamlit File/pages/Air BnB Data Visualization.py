@@ -37,7 +37,7 @@ def visualize_scatterplot(country):
 
 visualize_scatterplot(region_select)
 
-st.subheader('Price Boxplot for Listing around the world')
+st.subheader('Boxplot of Airbnb Listing Prices for the Top 10 Countries.')
 
 @st.cache_data
 def visualize_boxplot():
