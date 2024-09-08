@@ -93,9 +93,14 @@ The recommendation system is built using various techniques to ensure the best p
 A Streamlit application was created to allow users to interactively explore:
 </p>
 <ul>
-  <li><b>Scatter Plots:</b> Visualize relationships between features such as beds, price, and rating.</li>
+   <li><b>Data Set:</b> Explore the Airbnb dataset and gain a comprehensive understanding of its features.</li>
+    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/tree/main/Streamlit%20File/Streamlit_image"> 
+  <li><b>Scatter Plots:</b> Visualize relationships between features such as beds, price, and guest capacity.</li>
+  <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Streamlit%20File/Streamlit_image/Streamlit_1.JPG"> 
   <li><b>Box Plots:</b> Analyze the distribution of prices, ratings, and other features.</li>
-  <li><b>Recommendation Simulation:</b> Simulate recommendations based on user preferences for country, price, and rating.</li>
+   <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Streamlit%20File/Streamlit_image/Streamlit_2.JPG">
+  <li><b>Recommendation Simulation:</b> Simulate recommendations based on user preferences for country and price range which resulted to high rated recommendation.</li>
+  <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Streamlit%20File/Streamlit_image/Streamlit_3.JPG">
 </ul>
 
 <h2>How to Use</h2>
