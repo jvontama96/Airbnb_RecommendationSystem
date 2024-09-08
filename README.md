@@ -94,7 +94,7 @@ A Streamlit application was created to allow users to interactively explore:
 </p>
 <ul>
    <li><b>Data Set:</b> Explore the Airbnb dataset and gain a comprehensive understanding of its features.</li>
-    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/tree/main/Streamlit%20File/Streamlit_image"> 
+    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Streamlit%20File/Streamlit_image/Streamlit_4.JPG"> 
   <li><b>Scatter Plots:</b> Visualize relationships between features such as beds, price, and guest capacity.</li>
   <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Streamlit%20File/Streamlit_image/Streamlit_1.JPG"> 
   <li><b>Box Plots:</b> Analyze the distribution of prices, ratings, and other features.</li>
