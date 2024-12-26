@@ -8,16 +8,9 @@ import plotly.graph_objects as go
 import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
-import joblib
+import joblib 
 from PIL import Image
-from tensorflow.keras.models import load_model
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, BatchNormalization, Dropout
-from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau
-from tensorflow.keras.losses import MeanSquaredError
-from tensorflow.keras.metrics import MeanAbsoluteError
-import tensorflow as tf
-from tensorflow.keras.losses import MeanSquaredError
+from sklearn.ensemble import RandomForestRegressor
 
 
 
@@ -105,7 +98,7 @@ with tabs[0]:
         """,
         unsafe_allow_html=True,
     )
-    st.image("recommendation.png", caption="Step-by-step Recommendation Process", use_column_width=True)
+    st.image("recommendation.png", caption="Step-by-step Recommendation Process", use_container_width=True)
 
     # New Listing Flow Chart
     st.markdown(
@@ -116,7 +109,7 @@ with tabs[0]:
         """,
         unsafe_allow_html=True,
     )
-    st.image("price.png", caption="Process for Adding New Listings", use_column_width=True)
+    st.image("price.png", caption="Process for Adding New Listings", use_container_width=True)
 
     
 
@@ -950,12 +943,7 @@ with tabs[4]:
     df  = pd.read_csv("new_airbnb.csv")
 
     # Load the RF model
-    model = tf.keras.models.load_model('ann_price.h5')
-    model.compile(
-        optimizer=tf.keras.optimizers.Adam(learning_rate=0.01),
-        loss=tf.keras.losses.MeanSquaredError(),
-        metrics=[tf.keras.metrics.MeanAbsoluteError()]
-    )
+    model = joblib.load('rf_price.pkl')
 
     # Load the dataset
     df_predict  = df.copy()
