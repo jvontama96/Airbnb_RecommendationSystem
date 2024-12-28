@@ -66,6 +66,17 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+# Add CSS for sticky tabs
+st.markdown("""
+    <style>
+    .stTabs [role="tablist"] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: white; /* Optional: Customize the background color */
+    }
+    </style>
+""", unsafe_allow_html=True)
 
 
 # Create a horizontal tab navigation bar
