@@ -509,16 +509,6 @@ with tabs[2]:
 
 # In the second tab
 with tabs[3]:
-    
-    st.markdown(
-        """
-        <div class="tab-title">
-            Booking History and Recommendation Performance
-        </div>
-        """,
-    unsafe_allow_html=True,
-    )
-
     st.markdown(
         """
         <div class="tab-subtitle">
