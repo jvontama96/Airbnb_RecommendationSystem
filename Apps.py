@@ -663,7 +663,7 @@ with tabs[3]:
                                 4: 'Family-friendly', 5: 'Family-friendly'}
         }
 
-       def plot_feature_comparison(feature):
+        def plot_feature_comparison(feature):
             # Map numeric values to category names
             user_data_2[f'{feature}_name'] = user_data_2[feature].map(feature_mappings[feature])
             sorted_recommendations[f'{feature}_name'] = sorted_recommendations[feature].map(feature_mappings[feature])
