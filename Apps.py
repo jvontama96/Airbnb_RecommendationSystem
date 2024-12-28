@@ -81,7 +81,7 @@ with tabs[0]:
         """
         <div class="tab-description">
          Hotel Booking Apps based on Airbnb data to simulate a Recommendation System using a K-means clustering model 
-         and predict prices for new listings using an Random Forest model, recommending the optimal price 
+         and predict prices for new listings using Random Forest model, recommending the optimal price 
          range to hotel owners for their newly input listings.
         </div>
         """,
