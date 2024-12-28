@@ -663,97 +663,67 @@ with tabs[3]:
                                 4: 'Family-friendly', 5: 'Family-friendly'}
         }
 
-        def plot_feature_comparison(feature):
+       def plot_feature_comparison(feature):
             # Map numeric values to category names
             user_data_2[f'{feature}_name'] = user_data_2[feature].map(feature_mappings[feature])
             sorted_recommendations[f'{feature}_name'] = sorted_recommendations[feature].map(feature_mappings[feature])
-
+        
             # Count occurrences of each category
             user_counts = user_data_2[f'{feature}_name'].value_counts().sort_index()
             recommendation_counts = sorted_recommendations[f'{feature}_name'].value_counts().sort_index()
-
+        
             # Combine counts into a DataFrame
             comparison_df = pd.DataFrame({
-                'User Data': user_counts,
-                'Recommendations': recommendation_counts
-            }).fillna(0)
-
-            # Reset the index and rename the column
-            comparison_df = comparison_df.reset_index()
-            comparison_df.rename(columns={f'{feature}_name': 'Feature Level'}, inplace=True)
-
+                'Feature Level': user_counts.index,
+                'User Data': user_counts.values,
+                'Recommendations': recommendation_counts.reindex(user_counts.index, fill_value=0).values
+            })
+        
             # Add total and percentage calculations
             comparison_df['Total'] = comparison_df['User Data'] + comparison_df['Recommendations']
             comparison_df['User Percentage'] = (comparison_df['User Data'] / comparison_df['Total'] * 100).fillna(0)
             comparison_df['Recommendation Percentage'] = (comparison_df['Recommendations'] / comparison_df['Total'] * 100).fillna(0)
-
-            # Plotting
-            sns.set_style("whitegrid")
-            plt.figure(figsize=(8, 5))
-
-            # Plot stacked bars
-            bars1 = plt.bar(
-                comparison_df['Feature Level'], 
-                comparison_df['User Percentage'], 
-                label='User Data', 
-                color='#3498db', 
-                edgecolor='white', 
-                width=0.6
+        
+            # Create the plot
+            fig = go.Figure()
+        
+            # Add User Data bars
+            fig.add_trace(go.Bar(
+                x=comparison_df['Feature Level'],
+                y=comparison_df['User Percentage'],
+                name='User Data',
+                text=[f'{p:.1f}%\n({c})' for p, c in zip(comparison_df['User Percentage'], comparison_df['User Data'])],
+                textposition='auto',
+                marker_color='#3498db',
+                width=0.4
+            ))
+        
+            # Add Recommendations bars
+            fig.add_trace(go.Bar(
+                x=comparison_df['Feature Level'],
+                y=comparison_df['Recommendation Percentage'],
+                name='Recommendations',
+                text=[f'{p:.1f}%\n({c})' for p, c in zip(comparison_df['Recommendation Percentage'], comparison_df['Recommendations'])],
+                textposition='auto',
+                marker_color='#2ecc71',
+                width=0.4,
+                offset=0.2
+            ))
+        
+            # Update layout
+            fig.update_layout(
+                title=f'{feature.replace("_", " ").title()} Comparison',
+                xaxis_title=f'{feature.replace("_", " ").title()} Levels',
+                yaxis_title='Percentage (%)',
+                barmode='stack',
+                template='plotly_white',
+                legend=dict(title='', orientation='h', yanchor='bottom', y=1.02, xanchor='right', x=1),
+                margin=dict(t=40, l=20, r=20, b=40)
             )
-            bars2 = plt.bar(
-                comparison_df['Feature Level'], 
-                comparison_df['Recommendation Percentage'], 
-                bottom=comparison_df['User Percentage'], 
-                label='Recommendations', 
-                color='#2ecc71', 
-                edgecolor='white', 
-                width=0.6
-            )
-
-            # Add value labels to User Data bars
-            for bar, percentage, count in zip(
-                bars1, 
-                comparison_df['User Percentage'], 
-                comparison_df['User Data']
-            ):
-                plt.text(
-                    bar.get_x() + bar.get_width() / 2, 
-                    bar.get_height() / 2, 
-                    f'{percentage:.1f}%\n({int(count)})', 
-                    ha='center', 
-                    va='center', 
-                    color='white', 
-                    fontsize=10
-                )
-
-            # Add value labels to Recommendations bars
-            for bar, percentage, count in zip(
-                bars2, 
-                comparison_df['Recommendation Percentage'], 
-                comparison_df['Recommendations']
-            ):
-                plt.text(
-                    bar.get_x() + bar.get_width() / 2, 
-                    bar.get_height() / 2 + bar.get_y(), 
-                    f'{percentage:.1f}%\n({int(count)})', 
-                    ha='center', 
-                    va='center', 
-                    color='white', 
-                    fontsize=10
-                )
-
-            # Add title and labels
-            plt.title(f'{feature.replace("_", " ").title()} Comparison', fontsize=14, weight='bold')
-            plt.xlabel(f'{feature.replace("_", " ").title()} Levels', fontsize=12)
-            plt.ylabel('Percentage (%)', fontsize=12)
-            plt.xticks(fontsize=10)
-            plt.legend(title='', fontsize=10)
-            sns.despine(left=True, bottom=True)
-            plt.tight_layout()
-
+        
             # Display the plot in Streamlit
-            st.pyplot(plt)
-                
+            st.plotly_chart(fig)
+        
         # Streamlit UI for the feature comparison
         st.markdown(
             """
@@ -763,7 +733,7 @@ with tabs[3]:
             """,
             unsafe_allow_html=True,
         )
-
+        
         st.markdown(
             """
             <div class="tab-description">
@@ -773,14 +743,14 @@ with tabs[3]:
             """,
             unsafe_allow_html=True,
         )
-
+        
         # Dropdown for feature selection
         feature_choice = st.selectbox(
             'Select the feature:',
             options=['natural_condition', 'safety', 'work_suitability', 'family_suitability'],
             format_func=lambda x: x.replace("_", " ").title()
         )
-
+        
         # Plot the selected feature comparison
         plot_feature_comparison(feature_choice)
 
