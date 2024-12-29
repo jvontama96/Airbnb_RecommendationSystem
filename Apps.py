@@ -351,7 +351,7 @@ with tabs[1]:
             st.markdown(f"<p style='font-size: 18px;'>Price: <strong>${row['price_fix']}/night</strong></p>", unsafe_allow_html=True)
 
             stars = "★" * row['rating'] + "☆" * (5 - row['rating'])
-            st.markdown(f"<p style='font-size: 18px;'>Rating: <span style='color: gold;'>{stars}</span> | Reviews: {row['reviews']} | Guests: {row['guests']}</p>", unsafe_allow_html=True)
+            st.markdown(f"<p style='font-size: 18px;'>Rating: <span style='color: gold;'>{stars}</span> | Reviews: {row['reviews']} | Guests Capacity: {row['guests']}</p>", unsafe_allow_html=True)
 
             family_suitability = feature_mappings['family_suitability'][row['family_suitability']]
             natural_condition = feature_mappings['natural_condition'][row['natural_condition']]
@@ -728,8 +728,14 @@ with tabs[3]:
         st.markdown(
             """
             <div class="tab-description">
-            Analyze the alignment between user preferences and recommendations by examining the distribution of Family Suitability, Safety, Natural Condition, and Work Suitability. 
-            These factors play a critical role in determining amenities, facilities, and overall ambiance.
+                <p>Analyze the alignment between user preferences and recommendations by examining the distribution of Family Suitability, Safety, Natural Condition, and Work Suitability. These factors are critical in determining the amenities, facilities, and overall ambiance of a listing:</p>
+                <ul>
+                    <li><strong>Family Suitability:</strong> Indicates how well the facilities cater to families, especially those with babies or children.</li>
+                    <li><strong>Safety:</strong> Reflects the level of features designed to ensure the safety and security of the accommodation.</li>
+                    <li><strong>Work Suitability:</strong> Assesses how conducive the environment is for visitors who need to work productively during their stay.</li>
+                    <li><strong>Natural Condition:</strong> Highlights the extent to which the property is surrounded by natural elements such as beaches, mountains, or valleys.</li>
+                </ul>
+                <p>This analysis helps refine recommendations to better match user preferences.</p>
             </div>
             """,
             unsafe_allow_html=True,
