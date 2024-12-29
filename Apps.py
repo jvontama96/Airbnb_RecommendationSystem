@@ -690,11 +690,7 @@ with tabs[3]:
             comparison_df['Total'] = comparison_df['User Data'] + comparison_df['Recommendations']
             comparison_df['User Percentage'] = (comparison_df['User Data'] / comparison_df['Total'] * 100).fillna(0)
             comparison_df['Recommendation Percentage'] = (comparison_df['Recommendations'] / comparison_df['Total'] * 100).fillna(0)
-        
-            # Create the plot
-            fig = px.Figure()
-        
-           
+          
             # Create stacked bar chart
             fig = px.bar(
                 comparison_df_melted, 
