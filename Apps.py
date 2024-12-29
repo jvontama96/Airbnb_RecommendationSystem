@@ -685,21 +685,22 @@ with tabs[3]:
             comparison_df['Recommendation Percentage'] = (comparison_df['Recommendations'] / comparison_df['Total'] * 100).fillna(0)
         
             # Create the plot
-            fig = go.Figure()
+            fig = px.Figure()
         
             # Add User Data bars
-            fig.add_trace(go.Bar(
+            fig.add_trace(px.Bar(
                 x=comparison_df['Feature Level'],
                 y=comparison_df['User Percentage'],
                 name='User Data',
                 text=[f'{p:.1f}%\n({c})' for p, c in zip(comparison_df['User Percentage'], comparison_df['User Data'])],
                 textposition='auto',
                 marker_color='#3498db',
-                width=0.4
+                width=0.4,
+                barmode = 'stack'
             ))
         
             # Add Recommendations bars
-            fig.add_trace(go.Bar(
+            fig.add_trace(px.Bar(
                 x=comparison_df['Feature Level'],
                 y=comparison_df['Recommendation Percentage'],
                 name='Recommendations',
@@ -707,7 +708,8 @@ with tabs[3]:
                 textposition='auto',
                 marker_color='#2ecc71',
                 width=0.4,
-                offset=0.2
+                offset=0.2,
+                barmode = 'stack'
             ))
         
             # Update layout
