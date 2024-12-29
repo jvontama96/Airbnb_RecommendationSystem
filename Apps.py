@@ -1,4 +1,4 @@
-import streamlit as st
+ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
@@ -678,7 +678,14 @@ with tabs[3]:
                 'User Data': user_counts.values,
                 'Recommendations': recommendation_counts.reindex(user_counts.index, fill_value=0).values
             })
-        
+
+            # Melt DataFrame for Plotly Express
+            comparison_df_melted = comparison_df.melt(
+                id_vars='Feature Level', 
+                value_vars=['User Data', 'Recommendations'], 
+                var_name='Data Source', 
+                value_name='Counts'
+            )
             # Add total and percentage calculations
             comparison_df['Total'] = comparison_df['User Data'] + comparison_df['Recommendations']
             comparison_df['User Percentage'] = (comparison_df['User Data'] / comparison_df['Total'] * 100).fillna(0)
@@ -687,45 +694,31 @@ with tabs[3]:
             # Create the plot
             fig = px.Figure()
         
-            # Add User Data bars
-            fig.add_trace(px.Bar(
-                x=comparison_df['Feature Level'],
-                y=comparison_df['User Percentage'],
-                name='User Data',
-                text=[f'{p:.1f}%\n({c})' for p, c in zip(comparison_df['User Percentage'], comparison_df['User Data'])],
-                textposition='auto',
-                marker_color='#3498db',
-                width=0.4,
-                barmode = 'stack'
-            ))
-        
-            # Add Recommendations bars
-            fig.add_trace(px.Bar(
-                x=comparison_df['Feature Level'],
-                y=comparison_df['Recommendation Percentage'],
-                name='Recommendations',
-                text=[f'{p:.1f}%\n({c})' for p, c in zip(comparison_df['Recommendation Percentage'], comparison_df['Recommendations'])],
-                textposition='auto',
-                marker_color='#2ecc71',
-                width=0.4,
-                offset=0.2,
-                barmode = 'stack'
-            ))
-        
-            # Update layout
-            fig.update_layout(
+           
+            # Create stacked bar chart
+            fig = px.bar(
+                comparison_df_melted, 
+                x='Feature Level', 
+                y='Counts', 
+                color='Data Source', 
+                text='Counts', 
                 title=f'{feature.replace("_", " ").title()} Comparison',
-                xaxis_title=f'{feature.replace("_", " ").title()} Levels',
-                yaxis_title='Percentage (%)',
+                color_discrete_map={'User Data': '#3498db', 'Recommendations': '#2ecc71'},
+            )
+        
+            # Update layout for stacked bars
+            fig.update_layout(
                 barmode='stack',
+                xaxis_title=f'{feature.replace("_", " ").title()} Levels',
+                yaxis_title='Counts',
                 template='plotly_white',
                 legend=dict(title='', orientation='h', yanchor='bottom', y=1.02, xanchor='right', x=1),
                 margin=dict(t=40, l=20, r=20, b=40)
             )
-        
+
             # Display the plot in Streamlit
             st.plotly_chart(fig)
-        
+                
         # Streamlit UI for the feature comparison
         st.markdown(
             """
