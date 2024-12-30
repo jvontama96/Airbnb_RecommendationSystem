@@ -588,8 +588,8 @@ with tabs[3]:
         st.markdown(
             """
             <div class="tab-description">
-            Compare the percentage of cluster categories between user bookings and recommendations 
-            to evaluate the accuracy of the recommendations.
+            <p>Compare the percentage of cluster categories between user bookings and recommendations 
+            to evaluate the accuracy of the recommendations.</p>
             </div>
             """,
             unsafe_allow_html=True,
