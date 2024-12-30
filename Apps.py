@@ -1166,7 +1166,7 @@ with tabs[5]:
         st.image('Gmail.png', width=47)
         st.image('LinkedIn.png', width=40)
         st.image('Github.png', width=43)
-    with contact2:
+     with contact2:
         st.markdown(
             """
             <div style="display: flex; align-items: center; gap: 10px;">
