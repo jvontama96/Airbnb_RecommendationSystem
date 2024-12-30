@@ -69,7 +69,7 @@ st.markdown(
 
 
 # Create a horizontal tab navigation bar
-tabs = st.tabs(["Home", "Booking", "Recommendations", "History and Performance", "New Listing Form"])
+tabs = st.tabs(["Home", "Booking", "Recommendations", "History and Performance", "New Listing Form", "Contact"])
 
 # Home Tab
 with tabs[0]:
@@ -82,8 +82,7 @@ with tabs[0]:
         """
         <div class="tab-description">
          Hotel Booking Apps based on Airbnb data to simulate a Recommendation System using a K-means clustering model 
-         and predict prices for new listings using Random Forest model, recommending the optimal price 
-         range to hotel owners for their newly input listings.
+         and predict prices for new listings using Random Forest model, recommending the optimal price to hotel owners for their newly input listings.
         </div>
         """,
         unsafe_allow_html=True,
@@ -1143,3 +1142,23 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 ) 
+
+# Contact
+with tabs[5]:
+     st.markdown(
+            """
+            <div class="tab-description">
+            Hello, I'm Jevon Tama Sianipar, but you can call me Jevon.
+            I hold a bachelor's degree in Chemistry from the Faculty of Mathematics and Natural Sciences. I have 3 years of experience as a Retail Store Operations Manager.
+            
+            In this role, I not only analyzed data but also used it to develop and implement strategic solutions directly in the field. My hands-on managerial experience gave me a strong understanding of applying data-driven strategies to improve key business metrics such as sales achievement, growth, inventory management, marketing conversion, and service level agreements—an expertise often lacking among data professionals today.
+            
+            Motivated to broaden my skills and career prospects in the data field, I joined a 6-month Data Science bootcamp, where I focused on Data Analysis, Machine Learning, Deep Learning, and AI model-based projects. Following this, I completed a 3-month virtual internship as a Data Analyst to gain practical experience in applying these skills.
+
+            Please reach me for any suggestion for this project or just connect to me.
+
+            Thank you!
+            """,
+            unsafe_allow_html=True,
+        )
+
