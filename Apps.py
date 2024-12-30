@@ -187,9 +187,6 @@ with tabs[1]:
             min_value=min_price, max_value=65000, value=65000, step=50,
             label_visibility="collapsed"
         )
-
-    # Sliders in the second column
-    with col2:
         st.markdown('<div class="slider-label">Price Range:</div>', unsafe_allow_html=True)
         price_range = st.slider(
             'Select a price range',
@@ -197,6 +194,9 @@ with tabs[1]:
             label_visibility="collapsed"
         )
 
+    # Sliders in the second column
+    with col2:
+        
         st.markdown('<div class="slider-label">Family Suitability Level:</div>', unsafe_allow_html=True)
         family_suitability_input = st.select_slider(
             'Choose family suitability level',
