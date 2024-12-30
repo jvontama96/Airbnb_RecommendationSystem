@@ -1138,18 +1138,16 @@ st.markdown(
     unsafe_allow_html=True,
 ) 
 
-# Contact
 with tabs[5]:
-     st.markdown(
+    st.markdown(
         """
         <div class="tab-title">
             About Me
         </div>
         """,
         unsafe_allow_html=True,
-     )
-     st.info('''
-     
+    )
+    st.info('''
         Hello, I'm Jevon Tama Sianipar, but you can call me Jevon.
         I hold a bachelor's degree in Chemistry from the Faculty of Mathematics and Natural Sciences and have 3 years of experience as a Retail Store Operations Manager.
         
@@ -1158,19 +1156,25 @@ with tabs[5]:
         
         To expand my skills and career in the data field, I completed a 6-month Data Science bootcamp focused on Data Analysis, Machine Learning, Deep Learning, and AI projects, 
         followed by a 3-month virtual internship as a Data Analyst.
-         
-       ''')
-     # Use columns for layout
-     contact1, contact2 = st.columns([1, 20])
-    
-     # Align images and subheaders
-     with contact1:
-         st.image('Gmail.png', width=50)
-         st.image('LinkedIn.png', width=50)
-         st.image('Github.png', width=50)
+    ''')
 
-     with contact2:
-         st.subheader('jevoncareer@gmail.com')
-         st.subheader('https://www.linkedin.com/in/sianiparjevon')
-         st.subheader('https://www.github.com/jvontama96')
-  
+    # Create columns for contact details with consistent alignment
+    contact1, contact2 = st.columns([1, 4])  # Adjust column widths for better alignment
+    
+    # Display images and corresponding links
+    with contact1:
+        st.image('Gmail.png', width=40)  # Resize images for alignment
+        st.image('LinkedIn.png', width=40)
+        st.image('Github.png', width=40)
+
+    with contact2:
+        st.markdown(
+            '''
+            <div style="line-height: 1.8;">
+                <b>Email:</b> <a href="mailto:jevoncareer@gmail.com" style="text-decoration:none; color:#1a0dab;">jevoncareer@gmail.com</a><br>
+                <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/sianiparjevon" style="text-decoration:none; color:#1a0dab;">linkedin.com/in/sianiparjevon</a><br>
+                <b>GitHub:</b> <a href="https://www.github.com/jvontama96" style="text-decoration:none; color:#1a0dab;">github.com/jvontama96</a>
+            </div>
+            ''',
+            unsafe_allow_html=True
+        )
