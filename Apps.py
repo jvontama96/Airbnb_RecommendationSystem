@@ -68,7 +68,7 @@ st.markdown(
 
 
 # Create a horizontal tab navigation bar
-tabs = st.tabs(["Home", "Booking", "Recommendations", "History and Performance", "New Listing"])
+tabs = st.tabs(["Home", "Booking", "Recommendations", "History and Performance", "New Listing Form and Price Recommendation"])
 
 # Home Tab
 with tabs[0]:
@@ -1084,7 +1084,7 @@ with tabs[4]:
 
  
     st.markdown(
-    f'<p style="font-size: 18px; font-family: sans-serif; color: green; text-align: left;">Recommended Price ${recommended_price:.2f}</p>',
+    f'<p style="font-size: 18px; font-family: sans-serif; color: green; text-align: left;">Recommended Price: ${recommended_price:.2f}</p>',
     unsafe_allow_html=True      
     )
     # Input price
