@@ -1153,23 +1153,26 @@ with tabs[5]:
         """,
         unsafe_allow_html=True,
      )
-     st.markdown(
-            """
-            <div class="tab-description">
+     st.info('''
+     
+        Hello, I'm Jevon Tama Sianipar, but you can call me Jevon.
+        I hold a bachelor's degree in Chemistry from the Faculty of Mathematics and Natural Sciences and have 3 years of experience as a Retail Store Operations Manager.
         
-            Hello, I'm Jevon Tama Sianipar, but you can call me Jevon.
-            I hold a bachelor's degree in Chemistry and have 3 years of experience as a Retail Store Operations Manager.
-            
-            In this role, I analyzed data and applied it to create and implement strategies directly in the field, improving business metrics like sales, inventory, marketing conversion, and service levels. 
-            This hands-on experience gave me a strong understanding of using data to drive real-world solutions.
-            
-            To expand my skills and career in the data field, I completed a 6-month Data Science bootcamp focused on Data Analysis, Machine Learning, Deep Learning, and AI projects, 
-            followed by a 3-month virtual internship as a Data Analyst.
-            Please reach me for any suggestion for this project or just connect to me.
+        In this role, I analyzed data and applied it to create and implement strategies directly in the field, improving business metrics like sales, inventory, marketing conversion, and service levels. 
+        This hands-on experience gave me a strong understanding of using data to drive real-world solutions.
+        
+        To expand my skills and career in the data field, I completed a 6-month Data Science bootcamp focused on Data Analysis, Machine Learning, Deep Learning, and AI projects, 
+        followed by a 3-month virtual internship as a Data Analyst.
+         
+       ''')
 
-            Thank you!
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
-
+        contact1, contact2 = st.columns([1,20])
+        with contact1:
+            st.image('Gmail.png', width=47)
+            st.image('LinkedIn.png', width=40)
+            st.image('Github.png', width=43)
+    
+        with contact2:
+            st.subheader('jevoncareer@gmail.com')
+            st.subheader('https:/www.linkedin.com/in/sianiparjevon/')
+            st.subheader('https://www.github.com/jvontama96')
