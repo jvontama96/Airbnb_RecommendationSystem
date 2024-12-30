@@ -1157,32 +1157,25 @@ with tabs[5]:
         To expand my skills and career in the data field, I completed a 6-month Data Science bootcamp focused on Data Analysis, Machine Learning, Deep Learning, and AI projects, 
         followed by a 3-month virtual internship as a Data Analyst.
     ''')
-
-    
-    # Create columns with tighter layout
-    contact1, contact2 = st.columns([1, 5])
-
-    # Display images and align text
-    with contact1:
-        st.markdown(
-            """
-            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
-                <img src="Gmail.png" width="40" style="margin-bottom: 15px;">
-                <img src="LinkedIn.png" width="40" style="margin-bottom: 15px;">
-                <img src="Github.png" width="40">
+    st.markdown(
+        '''
+        <div style="line-height: 2; margin-top: 10px;">
+            <div>
+                <b>Email:</b> 
+                <a href="mailto:jevoncareer@gmail.com" style="text-decoration:none; color:#1a0dab;">jevoncareer@gmail.com</a>
+                <img src="Gmail.png" alt="Gmail Icon" style="width:20px; vertical-align:middle; margin-left:5px;">
             </div>
-            """,
-            unsafe_allow_html=True
-        )
-
-    with contact2:
-        st.markdown(
-            '''
-            <div style="line-height: 2; margin-top: 10px;">
-                <b>Email:</b> <a href="mailto:jevoncareer@gmail.com" style="text-decoration:none; color:#1a0dab;">jevoncareer@gmail.com</a><br>
-                <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/sianiparjevon" style="text-decoration:none; color:#1a0dab;">linkedin.com/in/sianiparjevon</a><br>
-                <b>GitHub:</b> <a href="https://www.github.com/jvontama96" style="text-decoration:none; color:#1a0dab;">github.com/jvontama96</a>
+            <div>
+                <b>LinkedIn:</b> 
+                <a href="https://www.linkedin.com/in/sianiparjevon" style="text-decoration:none; color:#1a0dab;">linkedin.com/in/sianiparjevon</a>
+                <img src="LinkedIn.png" alt="LinkedIn Icon" style="width:20px; vertical-align:middle; margin-left:5px;">
             </div>
-            ''',
-            unsafe_allow_html=True
-        )
+            <div>
+                <b>GitHub:</b> 
+                <a href="https://www.github.com/jvontama96" style="text-decoration:none; color:#1a0dab;">github.com/jvontama96</a>
+                <img src="Github.png" alt="GitHub Icon" style="width:20px; vertical-align:middle; margin-left:5px;">
+            </div>
+        </div>
+        ''',
+        unsafe_allow_html=True
+    )
