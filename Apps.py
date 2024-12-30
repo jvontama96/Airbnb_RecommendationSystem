@@ -1158,7 +1158,7 @@ with tabs[5]:
             <div class="tab-description">
         
             Hello, I'm Jevon Tama Sianipar, but you can call me Jevon.
-            I hold a bachelor's degree in Chemistry from the Faculty of Mathematics and Natural Sciences and have 3 years of experience as a Retail Store Operations Manager.
+            I hold a bachelor's degree in Chemistry and have 3 years of experience as a Retail Store Operations Manager.
             
             In this role, I analyzed data and applied it to create and implement strategies directly in the field, improving business metrics like sales, inventory, marketing conversion, and service levels. 
             This hands-on experience gave me a strong understanding of using data to drive real-world solutions.
