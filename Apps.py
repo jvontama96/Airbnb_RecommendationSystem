@@ -1170,7 +1170,7 @@ with tabs[5]:
          st.image('Github.png', width=50)
 
      with contact2:
-        st.subheader('jevoncareer@gmail.com')
-        st.subheader('https://www.linkedin.com/in/sianiparjevon')
-        st.subheader('https://www.github.com/jvontama96')
+         st.subheader('jevoncareer@gmail.com')
+         st.subheader('https://www.linkedin.com/in/sianiparjevon')
+         st.subheader('https://www.github.com/jvontama96')
   
