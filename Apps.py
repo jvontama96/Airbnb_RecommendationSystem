@@ -50,8 +50,9 @@ st.markdown(
             word-wrap: break-word;       /* Wrap long words */
         }
         .tab-description {
-            font-size: 16px;
+            font-size: 20px;
             color: var(--text-color, #555); /* Fallback for light mode */
+            font-weight: bold;    
             margin-bottom: 20px;
             text-align: justify;
         }
