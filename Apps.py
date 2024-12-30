@@ -28,7 +28,7 @@ st.markdown(
             text-align: center;
         }
         .tab-title {
-            font-size: 20px;          
+            font-size: 24px;          
             font-weight: bold;        
             color: white;             
             background-color: #ff4d4d; 
@@ -39,13 +39,13 @@ st.markdown(
             word-wrap: break-word;    
         }
         .tab-subtitle {
-            font-size: 16px;             /* Slightly smaller font size than the title */
-            font-weight: normal;         /* Normal font weight to distinguish from the bold title */
+            font-size: 20px;             /* Slightly smaller font size than the title */
+            font-weight: bold;         /* Normal font weight to distinguish from the bold title */
             color: #ffffff;              /* White color for text */
             background-color: #28a745;   /* Muted blue for the subtitle background */
             padding: 10px 15px;          /* Padding for spacing */
             border-radius: 6px;          /* Rounded corners */
-            text-align: left;            /* Align text to the left */
+            text-align: center;            /* Align text to the left */
             margin-bottom: 15px;         /* Space below the subtitle */
             word-wrap: break-word;       /* Wrap long words */
         }
