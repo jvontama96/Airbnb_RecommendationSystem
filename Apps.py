@@ -1165,9 +1165,9 @@ with tabs[5]:
     
      # Align images and subheaders
      with contact1:
-         st.image('Gmail.png', width=30)
-         st.image('LinkedIn.png', width=30)
-         st.image('Github.png', width=30)
+         st.image('Gmail.png', width=50)
+         st.image('LinkedIn.png', width=50)
+         st.image('Github.png', width=50)
 
      with contact2:
         st.subheader('jevoncareer@gmail.com')
