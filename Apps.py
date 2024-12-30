@@ -679,6 +679,11 @@ with tabs[3]:
                 'Recommendations': recommendation_counts.reindex(user_counts.index, fill_value=0).values
             })
 
+            # Add total and percentage calculations
+            comparison_df['Total'] = comparison_df['User Data'] + comparison_df['Recommendations']
+            comparison_df['User Percentage'] = (comparison_df['User Data'] / comparison_df['Total'] * 100).fillna(0)
+            comparison_df['Recommendation Percentage'] = (comparison_df['Recommendations'] / comparison_df['Total'] * 100).fillna(0)
+            
             # Melt DataFrame for Plotly Express
             comparison_df_melted = comparison_df.melt(
                 id_vars='Feature Level', 
@@ -686,10 +691,6 @@ with tabs[3]:
                 var_name='Data Source', 
                 value_name='Counts'
             )
-            # Add total and percentage calculations
-            comparison_df['Total'] = comparison_df['User Data'] + comparison_df['Recommendations']
-            comparison_df['User Percentage'] = (comparison_df['User Data'] / comparison_df['Total'] * 100).fillna(0)
-            comparison_df['Recommendation Percentage'] = (comparison_df['Recommendations'] / comparison_df['Total'] * 100).fillna(0)
           
             # Create stacked bar chart
             fig = px.bar(
