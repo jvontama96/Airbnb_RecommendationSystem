@@ -1158,16 +1158,31 @@ with tabs[5]:
         followed by a 3-month virtual internship as a Data Analyst.
     ''')
 
-    # Create columns for contact details with consistent alignment
-    contact1, contact2 = st.columns([1, 5])  # Adjust column widths for better alignment
     
-    # Display images and corresponding links
+    # Create columns with tighter layout
+    contact1, contact2 = st.columns([1, 5])
+
+    # Display images and align text
     with contact1:
-        st.image('Gmail.png', width=40)  # Resize images for alignment
-        st.image('LinkedIn.png', width=40)
-        st.image('Github.png', width=40)
+        st.markdown(
+            """
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+                <img src="Gmail.png" width="40" style="margin-bottom: 15px;">
+                <img src="LinkedIn.png" width="40" style="margin-bottom: 15px;">
+                <img src="Github.png" width="40">
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
     with contact2:
-        st.subheader('jevoncareer@gmail.com')
-        st.subheader('https://www.linkedin.com/in/sianiparjevon')
-        st.subheader('https://www.github.com/jvontama96')
+        st.markdown(
+            '''
+            <div style="line-height: 2; margin-top: 10px;">
+                <b>Email:</b> <a href="mailto:jevoncareer@gmail.com" style="text-decoration:none; color:#1a0dab;">jevoncareer@gmail.com</a><br>
+                <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/sianiparjevon" style="text-decoration:none; color:#1a0dab;">linkedin.com/in/sianiparjevon</a><br>
+                <b>GitHub:</b> <a href="https://www.github.com/jvontama96" style="text-decoration:none; color:#1a0dab;">github.com/jvontama96</a>
+            </div>
+            ''',
+            unsafe_allow_html=True
+        )
