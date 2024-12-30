@@ -696,14 +696,13 @@ with tabs[3]:
                 var_name='Data Source',
                 value_name='Percentage'
             )
-        
             # Create stacked bar chart
             fig = px.bar(
                 comparison_df_melted,
                 x='Data Source',
                 y='Percentage',
                 color='Feature Level',
-                text='Percentage',
+                text=comparison_df_melted['Percentage'].apply(lambda x: f'{x:.2f}%'),
                 title=f'{feature.replace("_", " ").title()} Comparison',
                 color_discrete_sequence=px.colors.qualitative.Set2
             )
@@ -716,8 +715,7 @@ with tabs[3]:
                 template='plotly_white',
                 legend=dict(title='', orientation='h', yanchor='bottom', y=1.02, xanchor='right', x=1),
                 margin=dict(t=40, l=20, r=20, b=40)
-            )
-        
+            )        
             # Display the plot in Streamlit
             st.plotly_chart(fig)           
         # Streamlit UI for the feature comparison
