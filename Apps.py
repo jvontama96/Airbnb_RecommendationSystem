@@ -1146,18 +1146,29 @@ st.markdown(
 # Contact
 with tabs[5]:
      st.markdown(
+        """
+        <div class="tab-title">
+            About Me
+        </div>
+        """,
+        unsafe_allow_html=True,
+     )
+     st.markdown(
             """
             <div class="tab-description">
+        
             Hello, I'm Jevon Tama Sianipar, but you can call me Jevon.
-            I hold a bachelor's degree in Chemistry from the Faculty of Mathematics and Natural Sciences. I have 3 years of experience as a Retail Store Operations Manager.
+            I hold a bachelor's degree in Chemistry from the Faculty of Mathematics and Natural Sciences and have 3 years of experience as a Retail Store Operations Manager.
             
-            In this role, I not only analyzed data but also used it to develop and implement strategic solutions directly in the field. My hands-on managerial experience gave me a strong understanding of applying data-driven strategies to improve key business metrics such as sales achievement, growth, inventory management, marketing conversion, and service level agreements—an expertise often lacking among data professionals today.
+            In this role, I analyzed data and applied it to create and implement strategies directly in the field, improving business metrics like sales, inventory, marketing conversion, and service levels. 
+            This hands-on experience gave me a strong understanding of using data to drive real-world solutions.
             
-            Motivated to broaden my skills and career prospects in the data field, I joined a 6-month Data Science bootcamp, where I focused on Data Analysis, Machine Learning, Deep Learning, and AI model-based projects. Following this, I completed a 3-month virtual internship as a Data Analyst to gain practical experience in applying these skills.
-
+            To expand my skills and career in the data field, I completed a 6-month Data Science bootcamp focused on Data Analysis, Machine Learning, Deep Learning, and AI projects, 
+            followed by a 3-month virtual internship as a Data Analyst.
             Please reach me for any suggestion for this project or just connect to me.
 
             Thank you!
+            </div>
             """,
             unsafe_allow_html=True,
         )
