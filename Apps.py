@@ -1163,17 +1163,14 @@ with tabs[5]:
             <div>
                 <b>Email:</b> 
                 <a href="mailto:jevoncareer@gmail.com" style="text-decoration:none; color:#1a0dab;">jevoncareer@gmail.com</a>
-                <img src="Gmail.png" alt="Gmail Icon" style="width:20px; vertical-align:middle; margin-left:5px;">
             </div>
             <div>
                 <b>LinkedIn:</b> 
                 <a href="https://www.linkedin.com/in/sianiparjevon" style="text-decoration:none; color:#1a0dab;">linkedin.com/in/sianiparjevon</a>
-                <img src="LinkedIn.png" alt="LinkedIn Icon" style="width:20px; vertical-align:middle; margin-left:5px;">
             </div>
             <div>
                 <b>GitHub:</b> 
                 <a href="https://www.github.com/jvontama96" style="text-decoration:none; color:#1a0dab;">github.com/jvontama96</a>
-                <img src="Github.png" alt="GitHub Icon" style="width:20px; vertical-align:middle; margin-left:5px;">
             </div>
         </div>
         ''',
