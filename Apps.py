@@ -68,7 +68,7 @@ st.markdown(
 
 
 # Create a horizontal tab navigation bar
-tabs = st.tabs(["Home", "Booking", "Recommendations", "History and Performance", "New Listing Form and Price Recommendation"])
+tabs = st.tabs(["Home", "Booking", "Recommendations", "History and Performance", "New Listing Form"])
 
 # Home Tab
 with tabs[0]:
