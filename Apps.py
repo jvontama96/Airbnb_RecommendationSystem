@@ -768,8 +768,8 @@ with tabs[3]:
         st.markdown(
             """
             <div class="tab-description">
-            Compare the price distribution in the user booking history with the recommendations to evaluate how accurately 
-            the price distribution in the recommendations represents the user booking history.
+            <p>Compare the price distribution in the user booking history with the recommendations to evaluate how accurately 
+            the price distribution in the recommendations represents the user booking history.</p>
             </div>
             """,
             unsafe_allow_html=True,
@@ -847,7 +847,7 @@ with tabs[3]:
         st.markdown(
             """
             <div class="tab-description">
-            Display the countries where the user has previously booked hotels.
+            <p>Display the countries where the user has previously booked hotels.</p>
             </div>
             """,
             unsafe_allow_html=True,
