@@ -1163,9 +1163,9 @@ with tabs[5]:
 
      contact1, contact2 = st.columns([1,20])
      with contact1:
-        st.image('Gmail.png', width=30)
-        st.image('LinkedIn.png', width=30)
-        st.image('Github.png', width=30)
+        st.image('Gmail.png', width=50)
+        st.image('LinkedIn.png', width=50)
+        st.image('Github.png', width=50)
      with contact2:
         st.markdown(
             """
