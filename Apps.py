@@ -1166,13 +1166,13 @@ with tabs[5]:
          
        ''')
 
-        contact1, contact2 = st.columns([1,20])
-        with contact1:
-            st.image('Gmail.png', width=47)
-            st.image('LinkedIn.png', width=40)
-            st.image('Github.png', width=43)
-    
-        with contact2:
-            st.subheader('jevoncareer@gmail.com')
-            st.subheader('https:/www.linkedin.com/in/sianiparjevon/')
-            st.subheader('https://www.github.com/jvontama96')
+     contact1, contact2 = st.columns([1,20])
+     with contact1:
+        st.image('Gmail.png', width=47)
+        st.image('LinkedIn.png', width=40)
+        st.image('Github.png', width=43)
+
+     with contact2:
+        st.subheader('jevoncareer@gmail.com')
+        st.subheader('https:/www.linkedin.com/in/sianiparjevon/')
+        st.subheader('https://www.github.com/jvontama96')
