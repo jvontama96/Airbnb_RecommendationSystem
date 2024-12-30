@@ -79,7 +79,6 @@ with tabs[0]:
     
     # Short Description
     st.info('''
-        <div class="tab-description">
          Hotel Booking Apps based on Airbnb data to simulate a Recommendation System using a K-means clustering model 
          and predict prices for new listings using Random Forest model, recommending the optimal price to hotel owners for their newly input listings.
     ''')
@@ -1167,6 +1166,21 @@ with tabs[5]:
         st.image('Gmail.png', width=47)
         st.image('LinkedIn.png', width=40)
         st.image('Github.png', width=43)
+    with contact2:
+        st.markdown(
+            """
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 1.2em; font-weight: bold;">jevoncareer@gmail.com</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 1.2em; font-weight: bold;">https://www.linkedin.com/in/sianiparjevon/</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 1.2em; font-weight: bold;">https://www.github.com/jvontama96</span>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
 
      with contact2:
         st.subheader('jevoncareer@gmail.com')
