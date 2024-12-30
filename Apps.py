@@ -1159,7 +1159,7 @@ with tabs[5]:
     ''')
 
     # Create columns for contact details with consistent alignment
-    contact1, contact2 = st.columns([1, 4])  # Adjust column widths for better alignment
+    contact1, contact2 = st.columns([1, 5])  # Adjust column widths for better alignment
     
     # Display images and corresponding links
     with contact1:
