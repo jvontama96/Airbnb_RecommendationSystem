@@ -1168,13 +1168,6 @@ with tabs[5]:
         st.image('Github.png', width=40)
 
     with contact2:
-        st.markdown(
-            '''
-            <div style="line-height: 1.8;">
-                <b>Email:</b> <a href="mailto:jevoncareer@gmail.com" style="text-decoration:none; color:#1a0dab;">jevoncareer@gmail.com</a><br>
-                <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/sianiparjevon" style="text-decoration:none; color:#1a0dab;">linkedin.com/in/sianiparjevon</a><br>
-                <b>GitHub:</b> <a href="https://www.github.com/jvontama96" style="text-decoration:none; color:#1a0dab;">github.com/jvontama96</a>
-            </div>
-            ''',
-            unsafe_allow_html=True
-        )
+        st.subheader('jevoncareer@gmail.com')
+        st.subheader('https://www.linkedin.com/in/sianiparjevon')
+        st.subheader('https://www.github.com/jvontama96')
