@@ -657,65 +657,69 @@ with tabs[3]:
         feature_mappings = {
             'natural_condition': {0: 'Minimal', 1: 'Scenic', 2: 'Nature-Rich', 3: 'Nature-Rich'},
             'safety': {0: 'Standard', 1: 'Enhanced', 2: 'High-Security', 3: 'High-Security', 4: 'High-Security',
-                    5: 'High-Security', 6: 'High-Security', 7: 'High-Security'},
+                       5: 'High-Security', 6: 'High-Security', 7: 'High-Security'},
             'work_suitability': {0: 'Basic', 1: 'Enhanced', 2: 'Professional', 3: 'Professional'},
             'family_suitability': {0: 'Basic', 1: 'Comfortable', 2: 'Comfortable', 3: 'Family-friendly',
-                                4: 'Family-friendly', 5: 'Family-friendly'}
+                                   4: 'Family-friendly', 5: 'Family-friendly'}
         }
-
+        
         def plot_feature_comparison(feature):
             # Map numeric values to category names
             user_data_2[f'{feature}_name'] = user_data_2[feature].map(feature_mappings[feature])
             sorted_recommendations[f'{feature}_name'] = sorted_recommendations[feature].map(feature_mappings[feature])
         
-            # Count occurrences of each category
-            user_counts = user_data_2[f'{feature}_name'].value_counts().sort_index()
-            recommendation_counts = sorted_recommendations[f'{feature}_name'].value_counts().sort_index()
+            # Calculate percentage distributions
+            user_percentage = (
+                user_data_2[f'{feature}_name']
+                .value_counts(normalize=True)
+                .sort_index()
+                .multiply(100)
+            )
+            recommendation_percentage = (
+                sorted_recommendations[f'{feature}_name']
+                .value_counts(normalize=True)
+                .reindex(user_percentage.index, fill_value=0)
+                .multiply(100)
+            )
         
-            # Combine counts into a DataFrame
+            # Combine percentages into a DataFrame
             comparison_df = pd.DataFrame({
-                'Feature Level': user_counts.index,
-                'User Data': user_counts.values,
-                'Recommendations': recommendation_counts.reindex(user_counts.index, fill_value=0).values
+                'Feature Level': user_percentage.index,
+                'User Data': user_percentage.values,
+                'Recommendations': recommendation_percentage.values
             })
-
-            # Add total and percentage calculations
-            comparison_df['Total'] = comparison_df['User Data'] + comparison_df['Recommendations']
-            comparison_df['User Percentage'] = (comparison_df['User Data'] / comparison_df['Total'] * 100).fillna(0)
-            comparison_df['Recommendation Percentage'] = (comparison_df['Recommendations'] / comparison_df['Total'] * 100).fillna(0)
-            
+        
             # Melt DataFrame for Plotly Express
             comparison_df_melted = comparison_df.melt(
-                id_vars='Feature Level', 
-                value_vars=['User Data', 'Recommendations'], 
-                var_name='Data Source', 
-                value_name='Counts'
+                id_vars='Feature Level',
+                value_vars=['User Data', 'Recommendations'],
+                var_name='Data Source',
+                value_name='Percentage'
             )
-          
+        
             # Create stacked bar chart
             fig = px.bar(
-                comparison_df_melted, 
-                x='Feature Level', 
-                y='Counts', 
-                color='Data Source', 
-                text='Counts', 
+                comparison_df_melted,
+                x='Data Source',
+                y='Percentage',
+                color='Feature Level',
+                text='Percentage',
                 title=f'{feature.replace("_", " ").title()} Comparison',
-                color_discrete_map={'User Data': '#3498db', 'Recommendations': '#2ecc71'},
+                color_discrete_sequence=px.colors.qualitative.Set2
             )
         
             # Update layout for stacked bars
             fig.update_layout(
                 barmode='stack',
-                xaxis_title=f'{feature.replace("_", " ").title()} Levels',
-                yaxis_title='Counts',
+                xaxis_title='',
+                yaxis_title='Percentage',
                 template='plotly_white',
                 legend=dict(title='', orientation='h', yanchor='bottom', y=1.02, xanchor='right', x=1),
                 margin=dict(t=40, l=20, r=20, b=40)
             )
-
+        
             # Display the plot in Streamlit
-            st.plotly_chart(fig)
-                
+            st.plotly_chart(fig)           
         # Streamlit UI for the feature comparison
         st.markdown(
             """
