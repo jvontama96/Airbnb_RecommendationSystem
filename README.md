@@ -72,7 +72,7 @@ The recommendation system is built using various techniques to ensure the best p
 </ul>
 
 <h3>8. Price Recommendation</h3>
-<img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Price.png?raw=true" alt="Weighted Rating Workflow" style="width:100%; max-width:600px;">
+<img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/price.png?raw=true" alt="price recommendation" style="width:100%; max-width:600px;">
 
 <ul>
   <li><b>Price Recommendation:</b> Implementing Random Forest model to recommend suitable price for a newly added listing based on its facilities and amenities.</li>
@@ -81,69 +81,26 @@ The recommendation system is built using various techniques to ensure the best p
 
 <h2>Result and Evaluation </h2>
 <ul>
-  <li><b>1. Cluster Result </b></li>
-  <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/clustering.png?raw=true" alt="Weighted Rating Result" style="width:100%; max-width:600px;">
-  
   <li><b>1. Weighted Rating Result</b></li>
   <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Result_1.png?raw=true" alt="Weighted Rating Result" style="width:100%; max-width:600px;">
 
   <li><b>2. Content Based Filtering</b></li>
   <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Result_2.jpg?raw=true" alt="Content Based Filtering Result" style="width:100%; max-width:600px;">
 
-  <li><b>4. K-Means Clustering</b></li>
+  <li><b>3. K-Means Clustering</b></li>
   <ul>
     <li><b>Cluster Result:</b> The clustering model resulted in 5 clusters.</li>
     <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/clustering.png?raw=true" alt="Cluster Result" style="width:100%; max-width:600px;">
-    <li><b>Cluster Recommendation Result:</b> Result of recommendation system in streamlit web app.</li>
-    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/clustering.png?raw=true" alt="Cluster Recommendation Result" style="width:100%; max-width:600px;">
+    <li><b>Cluster Recommendation Result in streamlit web app</b></li>
+    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Result_3.png?raw=true" alt="Cluster Recommendation Result" style="width:100%; max-width:600px;">
     <li><b>Cluster Distribution Comparison:</b> Analyzing the distribution of clusters in user data versus recommended listings to assess relevance.</li>
-    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Result_3.png?raw=true" alt="Cluster Distribution Comparison" style="width:100%; max-width:600px;">
-    <li><b>Price Comparison:</b> Comparing the price distribution between user data and recommended listings to ensure alignment with user budgets.</li>
-    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_2.jpg?raw=true" alt="Price Comparison" style="width:100%; max-width:600px;">
-    <li><b>Country Comparison:</b> Evaluating the consistency of country preferences between user data and recommendations.</li>
-    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_3.jpg?raw=true" alt="Country Comparison" style="width:100%; max-width:600px;">
+    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_1.png?raw=true" alt="Cluster Distribution Comparison" style="width:100%; max-width:600px;">
+    <li><b>Family Suitability and Natural Condition Feature Comparison:</b> Comparing Familiy and Natural condition feature distribution between user data and recommended listings to ensure alignment.</li>
+    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_2.png?raw=true" alt="Feature Comparison 1" style="width:100%; max-width:600px;">
+    <li><b>Safety and Work Suitability Feature Comparison:</b> Comparing Safety and Work Suitability feature distribution between user data and recommended listings.</li>
+    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_3.jpg?raw=true" alt="Feature Comparison 2" style="width:100%; max-width:600px;">
   </ul>
+  <li><b>4. Price Recommendation Result/b></li>
+  <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/price_result.png?raw=true" alt="Price Recommendation Result" style="width:100%; max-width:600px;">
 </ul>
 
-<h2>Streamlit Simulation: <a href="https://github.com/jvontama96/AirBnB_RecommendationSystem/tree/main/Streamlit%20File">Directory</a></h2>
-
-<p>
-A Streamlit application was created to allow users to interactively explore:
-</p>
-<ul>
-   <li><b>Data Set:</b> Explore the Airbnb dataset and gain a comprehensive understanding of its features.</li>
-    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Streamlit%20File/Streamlit_image/Streamlit_4.JPG"> 
-  <li><b>Scatter Plots:</b> Visualize relationships between features such as beds, price, and guest capacity.</li>
-  <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Streamlit%20File/Streamlit_image/Streamlit_1.JPG"> 
-  <li><b>Box Plots:</b> Analyze the distribution of prices, ratings, and other features.</li>
-   <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Streamlit%20File/Streamlit_image/Streamlit_2.JPG">
-  <li><b>Recommendation Simulation:</b> Simulate recommendations based on user preferences for country and price range which resulted to high rated recommendation.</li>
-  <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Streamlit%20File/Streamlit_image/Streamlit_3.JPG">
-</ul>
-
-<h2>How to Use</h2>
-
-<ol>
-  <li><b>Clone the Repository:</b></li>
-</ol>
-<pre>
-<code>git clone https://github.com/yourusername/Airbnb_RecommendationSystem.git</code>
-</pre>
-
-<ol start="2">
-  <li><b>Install Dependencies:</b></li>
-</ol>
-<pre>
-<code>pip install -r requirements.txt</code>
-</pre>
-
-<ol start="3">
-  <li><b>Run the Streamlit Application:</b></li>
-</ol>
-<pre>
-<code>streamlit run opening.py</code>
-</pre>
-
-<p>
-Use the Streamlit app to explore data and generate personalized recommendations interactively.
-</p>
