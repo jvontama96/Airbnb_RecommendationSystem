@@ -71,18 +71,33 @@ The recommendation system is built using various techniques to ensure the best p
   <li><b>Cluster-Based Recommendations:</b> Providing recommendations from within the same cluster to ensure relevance to user preferences.</li>
 </ul>
 
-<h3>8. Result and Evaluation</h3>
-<ul>
-  <li><b>8.1 Weighted Rating Result</b></li>
-  <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Result_1.jpg?raw=true" alt="Weighted Rating Result" style="width:100%; max-width:600px;">
+<h3>8. Price Recommendation</h3>
+<img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Price.png?raw=true" alt="Weighted Rating Workflow" style="width:100%; max-width:600px;">
 
-  <li><b>8.2 Content Based Filtering</b></li>
+<ul>
+  <li><b>Price Recommendation:</b> Implementing Random Forest model to recommend suitable price for a newly added listing based on its facilities and amenities.</li>
+</ul>
+
+
+<h2>Result and Evaluation </h2>
+<ul>
+  <li><b>1. Cluster Result </b></li>
+  <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/clustering.png?raw=true" alt="Weighted Rating Result" style="width:100%; max-width:600px;">
+  
+  <li><b>1. Weighted Rating Result</b></li>
+  <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Result_1.png?raw=true" alt="Weighted Rating Result" style="width:100%; max-width:600px;">
+
+  <li><b>2. Content Based Filtering</b></li>
   <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Result_2.jpg?raw=true" alt="Content Based Filtering Result" style="width:100%; max-width:600px;">
 
-  <li><b>8.3 K-Means Clustering</b></li>
+  <li><b>4. K-Means Clustering</b></li>
   <ul>
+    <li><b>Cluster Result:</b> The clustering model resulted in 5 clusters.</li>
+    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/clustering.png?raw=true" alt="Cluster Result" style="width:100%; max-width:600px;">
+    <li><b>Cluster Recommendation Result:</b> Result of recommendation system in streamlit web app.</li>
+    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/clustering.png?raw=true" alt="Cluster Recommendation Result" style="width:100%; max-width:600px;">
     <li><b>Cluster Distribution Comparison:</b> Analyzing the distribution of clusters in user data versus recommended listings to assess relevance.</li>
-    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_1.jpg?raw=true" alt="Cluster Distribution Comparison" style="width:100%; max-width:600px;">
+    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Result_3.png?raw=true" alt="Cluster Distribution Comparison" style="width:100%; max-width:600px;">
     <li><b>Price Comparison:</b> Comparing the price distribution between user data and recommended listings to ensure alignment with user budgets.</li>
     <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_2.jpg?raw=true" alt="Price Comparison" style="width:100%; max-width:600px;">
     <li><b>Country Comparison:</b> Evaluating the consistency of country preferences between user data and recommendations.</li>
