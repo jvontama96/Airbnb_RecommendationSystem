@@ -3,8 +3,8 @@
 <p align="left">
 This project uses data from the Airbnb platform, scraped and uploaded to Kaggle, with a total of 12,932 rows. It focuses on developing a recommendation system for Airbnb listings by combining weighted ratings, content-based filtering, and clustering models using KMeans. Additionally, a Random Forest model is used to recommend prices for newly added listings. The goal is to provide personalized recommendations based on user preferences and listing characteristics.
 </p>
-<p align="left" style="font-size: larger;">
-<a href="https://airbnb-hotel-recommendation-price-sim.streamlit.app/" style="font-weight: bold; color: #007BFF;">Streamlit web app</a>.
+<p align="left">
+<a href="https://airbnb-hotel-recommendation-price-sim.streamlit.app/" style="font-weight: bold; font-size: larger; color: #007BFF;">Link to Streamlit Web App</a>.
 </p>
 
 <h2>Overview</h2>
