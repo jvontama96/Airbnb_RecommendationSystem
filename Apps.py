@@ -329,41 +329,45 @@ with tabs[1]:
     search_term = st.text_input("Search By Name:", label_visibility="collapsed")
 
     if search_term:
-        top_listings = top_listings[top_listings['name'].str.contains(search_term, case=False, na=False)]
+        # Filter the main dataframe based on the search term
+        filtered_df = df[df['name'].str.contains(search_term, case=False, na=False)]
+    else:
+        # Default to the top listings when no search term is provided
+        filtered_df = top_listings
 
     # Sort dropdown
     sort_by = st.selectbox("Sort By:", options=sort_options, index=0)
     ascending = st.checkbox("Sort Ascending", value=True)
-    top_listings = top_listings.sort_values(by=sort_columns[sort_by], ascending=ascending)
-    
+    filtered_df = filtered_df.sort_values(by=sort_columns[sort_by], ascending=ascending)
+
     # Placeholder for booking success messages
     booking_success_placeholder = st.empty()
 
     # Display listings
-    for index, row in top_listings.iterrows():
-        with st.container():
-            st.markdown(f"<h3 style='font-weight: bold; font-size: 22px;'>{row['name']}</h3>", unsafe_allow_html=True)
-            st.markdown(f"<p style='font-size: 18px;'>Price: <strong>${row['price_fix']}/night</strong></p>", unsafe_allow_html=True)
+    if not filtered_df.empty:
+        for index, row in filtered_df.iterrows():
+            with st.container():
+                st.markdown(f"<h3 style='font-weight: bold; font-size: 22px;'>{row['name']}</h3>", unsafe_allow_html=True)
+                st.markdown(f"<p style='font-size: 18px;'>Price: <strong>${row['price_fix']}/night</strong></p>", unsafe_allow_html=True)
+                stars = "★" * row['rating'] + "☆" * (5 - row['rating'])
+                st.markdown(f"<p style='font-size: 18px;'>Rating: <span style='color: gold;'>{stars}</span> | Reviews: {row['reviews']} | Guests Capacity: {row['guests']}</p>", unsafe_allow_html=True)
+                family_suitability = feature_mappings['family_suitability'][row['family_suitability']]
+                natural_condition = feature_mappings['natural_condition'][row['natural_condition']]
+                work_suitability = feature_mappings['work_suitability'][row['work_suitability']]
+                safety = feature_mappings['safety'][row['safety']]
+                st.markdown(
+                    f"<p style='font-size: 18px;'>" \
+                    f"{family_suitability} | {natural_condition} | {work_suitability} | {safety}</p>",
+                    unsafe_allow_html=True
+                )
+                if st.button(f'Book', key=f'book_{index}'):
+                    st.session_state['user_data'] = pd.concat([st.session_state.get('user_data', pd.DataFrame()), row.to_frame().T], ignore_index=True)
+                    booking_success_placeholder.success(f"Booking successful for {row['name']}!")
+                st.markdown("<hr>", unsafe_allow_html=True)
+    else:
+        st.markdown("<p style='font-size: 18px; color: red;'>No listings match your search.</p>", unsafe_allow_html=True)
 
-            stars = "★" * row['rating'] + "☆" * (5 - row['rating'])
-            st.markdown(f"<p style='font-size: 18px;'>Rating: <span style='color: gold;'>{stars}</span> | Reviews: {row['reviews']} | Guests Capacity: {row['guests']}</p>", unsafe_allow_html=True)
 
-            family_suitability = feature_mappings['family_suitability'][row['family_suitability']]
-            natural_condition = feature_mappings['natural_condition'][row['natural_condition']]
-            work_suitability = feature_mappings['work_suitability'][row['work_suitability']]
-            safety = feature_mappings['safety'][row['safety']]
-
-            st.markdown(
-                f"<p style='font-size: 18px;'>" \
-                f"{family_suitability} | {natural_condition} | {work_suitability} | {safety}</p>",
-                unsafe_allow_html=True
-            )
-
-            if st.button(f'Book', key=f'book_{index}'):
-                st.session_state['user_data'] = pd.concat([st.session_state.get('user_data', pd.DataFrame()), row.to_frame().T], ignore_index=True)
-                booking_success_placeholder.success(f"Booking successful for {row['name']}!")
-
-            st.markdown("<hr>", unsafe_allow_html=True)
 
 
 # Second page content
