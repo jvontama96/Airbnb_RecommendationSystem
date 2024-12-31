@@ -98,7 +98,7 @@ The recommendation system is built using various techniques to ensure the best p
     <li><b>Family Suitability and Natural Condition Feature Comparison:</b> Comparing Familiy and Natural condition feature distribution between user data and recommended listings to ensure alignment.</li>
     <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_2.png?raw=true" alt="Feature Comparison 1" style="width:100%; max-width:600px;">
     <li><b>Safety and Work Suitability Feature Comparison:</b> Comparing Safety and Work Suitability feature distribution between user data and recommended listings.</li>
-    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_3.jpg?raw=true" alt="Feature Comparison 2" style="width:100%; max-width:600px;">
+    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_3.png?raw=true" alt="Feature Comparison 2" style="width:100%; max-width:600px;">
   </ul>
   <li><b>4. Price Recommendation Result</li>
   <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/price_result.png?raw=true" alt="Price Recommendation Result" style="width:100%; max-width:600px;">
