@@ -1,7 +1,10 @@
-<h1 align="center">Recommendation System Based on Weighted Rating, Content-Based Filtering, and Clustering Model for Airbnb</h1>
+<h1 align="center">Airbnb Hotel Booking and Price Recommendation System </h1>
 
-<p align="center">
-This project focuses on developing a recommendation system for Airbnb listings using a combination of weighted ratings, content-based filtering, and clustering models. The goal is to offer personalized recommendations based on user preferences and listing characteristics. Additionally, a Streamlit simulation has been created to allow for interactive exploration of the recommendations.
+<p align="left">
+This project uses data from the Airbnb platform, scraped and uploaded to Kaggle, with a total of 12,932 rows. It focuses on developing a recommendation system for Airbnb listings by combining weighted ratings, content-based filtering, and clustering models using KMeans. Additionally, a Random Forest model is used to recommend prices for newly added listings. The goal is to provide personalized recommendations based on user preferences and listing characteristics.
+</p>
+<p align="left">
+For the Streamlit web app, <a href="https://airbnb-hotel-recommendation-price-sim.streamlit.app/" style="font-weight: bold; color: #007BFF;">click here</a>.
 </p>
 
 <h2>Overview</h2>
@@ -10,10 +13,10 @@ This project focuses on developing a recommendation system for Airbnb listings u
 The recommendation system is built using various techniques to ensure the best possible recommendations for users. The approach includes:
 </p>
 <ul>
-  <li><b>Weighted Rating:</b> Accounts for both the number of reviews and the average rating to rank listings.</li>
-  <li><b>Content-Based Filtering:</b> Recommends listings similar to those the user has shown interest in.</li>
+  <li><b>Weighted Rating:</b>Display recommendations based on weighted scores calculated from user preferences to provide the best options.</li>
+  <li><b>Content-Based Filtering:</b> Recommend listings with amenities descriptions similar to those of the hotel the user booked. </li>
   <li><b>Clustering Model:</b> Groups listings using KMeans clustering to recommend similar options within a cluster.</li>
-  <li><b>Streamlit Simulation:</b> Provides an interactive platform to explore scatter plots, box plots, and recommendations based on user preferences for country, price, and rating.</li>
+  <li><b>Price Recommendation:</b> A form to input new listings into the main dataset, featuring a tool to recommend suitable prices based on the facilities and amenities of the new listing.</li>
 </ul>
 
 <h2>Methodology</h2>
