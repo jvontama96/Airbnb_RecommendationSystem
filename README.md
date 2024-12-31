@@ -84,10 +84,10 @@ The recommendation system is built using various techniques to ensure the best p
   <li><b>1. Weighted Rating Result</b></li>
   <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Result_1.png?raw=true" alt="Weighted Rating Result" style="width:100%; max-width:600px;">
 
-  <li><b>2. Content Based Filtering</b></li>
+  <li><b>2. Content Based Filtering Result and Evaluation</b></li>
   <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Result_2.jpg?raw=true" alt="Content Based Filtering Result" style="width:100%; max-width:600px;">
 
-  <li><b>3. K-Means Clustering</b></li>
+  <li><b>3. K-Means Clustering Model Result</b></li>
   <ul>
     <li><b>Cluster Result:</b> The clustering model resulted in 5 clusters.</li>
     <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/clustering.png?raw=true" alt="Cluster Result" style="width:100%; max-width:600px;">
@@ -100,7 +100,7 @@ The recommendation system is built using various techniques to ensure the best p
     <li><b>Safety and Work Suitability Feature Comparison:</b> Comparing Safety and Work Suitability feature distribution between user data and recommended listings.</li>
     <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_3.jpg?raw=true" alt="Feature Comparison 2" style="width:100%; max-width:600px;">
   </ul>
-  <li><b>4. Price Recommendation Result/b></li>
+  <li><b>4. Price Recommendation Result</li>
   <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/price_result.png?raw=true" alt="Price Recommendation Result" style="width:100%; max-width:600px;">
 </ul>
 
