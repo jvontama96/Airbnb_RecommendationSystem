@@ -13,10 +13,7 @@ from PIL import Image
 from sklearn.ensemble import RandomForestRegressor
 
 
-st.set_page_config(
-        page_title="Airbnb Booking and Price Reommendation",
-        layout="wide"
-    )
+
 # Set custom style for green minimalist theme with watermark
 st.markdown(
     """
@@ -73,7 +70,10 @@ st.markdown(
 
 # Create a horizontal tab navigation bar
 tabs = st.tabs(["Home", "Booking", "Recommendations", "History and Performance", "New Listing Form", "Contact"])
-
+st.set_page_config(
+    page_title="Airbnb Booking and Price Recommendation",
+    layout="wide"
+)
 # Home Tab
 with tabs[0]:
 
