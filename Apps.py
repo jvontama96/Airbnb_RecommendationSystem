@@ -13,7 +13,10 @@ from PIL import Image
 from sklearn.ensemble import RandomForestRegressor
 
 
-
+st.set_page_config(
+        page_title="Airbnb Booking and Price Reommendation",
+        layout="wide"
+    )
 # Set custom style for green minimalist theme with watermark
 st.markdown(
     """
