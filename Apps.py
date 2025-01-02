@@ -67,13 +67,14 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-
-# Create a horizontal tab navigation bar
-tabs = st.tabs(["Home", "Booking", "Recommendations", "History and Performance", "New Listing Form", "Contact"])
 st.set_page_config(
     page_title="Airbnb Booking and Price Recommendation",
     layout="wide"
 )
+
+# Create a horizontal tab navigation bar
+tabs = st.tabs(["Home", "Booking", "Recommendations", "History and Performance", "New Listing Form", "Contact"])
+
 # Home Tab
 with tabs[0]:
 
