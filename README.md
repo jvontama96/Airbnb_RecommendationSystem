@@ -4,7 +4,7 @@
 This project uses data from the Airbnb platform, scraped and uploaded to Kaggle, with a total of 12,932 rows. It focuses on developing a recommendation system for Airbnb listings by combining weighted ratings, content-based filtering, and clustering models using KMeans. Additionally, a Random Forest model is used to recommend prices for newly added listings. The goal is to provide personalized recommendations based on user preferences and listing characteristics.
 </p>
 <p align="left">
-<a href="https://airbnb-hotel-recommendation-price-sim.streamlit.app/" style="font-weight: bold; font-size: larger; color: #007BFF;">Link to Streamlit Web App</a>.
+<a href="https://airbnb-hotel-recommendation-price-sim.streamlit.app/" style="font-weight: bold; font-size: larger; color: #007BFF;">Link to Streamlit Web App</a>
 </p>
 
 <h2>Overview</h2>
@@ -35,7 +35,7 @@ The recommendation system is built using various techniques to ensure the best p
 </ul>
 
 <h3>3. Weighted Rating</h3>
-<img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Workflow/Workflow_1.jpg?raw=true" alt="Weighted Rating Workflow" style="width:100%; max-width:600px;">
+<img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Workflow/Workflow_1.png?raw=true" alt="Weighted Rating Workflow" style="width:100%; max-width:600px;">
 
 <ul>
   <li><b>Calculation:</b> Developing a formula to weigh ratings based on the number of reviews, ensuring that listings with more reviews are ranked more accurately.</li>
@@ -43,7 +43,7 @@ The recommendation system is built using various techniques to ensure the best p
 </ul>
 
 <h3>4. Content-Based Filtering</h3>
-<img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Workflow/Workflow_2.jpg?raw=true" alt="Weighted Rating Workflow" style="width:100%; max-width:600px;">
+<img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Workflow/Workflow_2.png?raw=true" alt="Weighted Rating Workflow" style="width:100%; max-width:600px;">
 
 <ul>
   <li><b>Similarity Calculation:</b> Measuring similarity between listings based on features, allowing for the recommendation of similar listings.</li>
@@ -64,7 +64,7 @@ The recommendation system is built using various techniques to ensure the best p
 </ul>
 
 <h3>7. KMeans Clustering Recommendation System</h3>
-<img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Workflow/Workflow_3.jpg?raw=true" alt="Weighted Rating Workflow" style="width:100%; max-width:600px;">
+<img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Workflow/Workflow_3.png?raw=true" alt="Weighted Rating Workflow" style="width:100%; max-width:600px;">
 
 <ul>
   <li><b>Clustering:</b> Implementing KMeans to group listings into clusters based on their features.</li>
@@ -100,7 +100,10 @@ The recommendation system is built using various techniques to ensure the best p
     <li><b>Safety and Work Suitability Feature Comparison:</b> Comparing Safety and Work Suitability feature distribution between user data and recommended listings.</li>
     <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Cluster%20Result/Result_3_3.png?raw=true" alt="Feature Comparison 2" style="width:100%; max-width:600px;">
   </ul>
-  <li><b>4. Price Recommendation Result</li>
+  <li><b>4. Price Recommendation Model Evaluation and Result</b></li>
+    <li><b>We use three models to determine the best one for predicting hotel prices: Random Forest, Neural Network (TensorFlow), and Neural Network (PyTorch).</b></li>
+    <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/model_result.png?raw=true" alt="Model Evaluation" style="width:100%; max-width:600px;">
+    <li><b>Implementation of The best model which is Random Forest to Streamlit web application</b></li>
   <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/price_result.png?raw=true" alt="Price Recommendation Result" style="width:100%; max-width:600px;">
 </ul>
 
