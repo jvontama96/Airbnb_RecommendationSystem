@@ -19,7 +19,7 @@ The recommendation system is built using various techniques to ensure the best p
   <li><b>Price Recommendation:</b> A form to input new listings into the main dataset, featuring a tool to recommend suitable prices based on the facilities and amenities of the new listing.</li>
 </ul>
 
-<h2>Methodology</h2>
+<h2>Project Pipeline</h2>
 
 <h3>1. Data Preprocessing</h3>
 <ul>
@@ -79,7 +79,7 @@ The recommendation system is built using various techniques to ensure the best p
 </ul>
 
 
-<h2>Result and Evaluation </h2>
+<h2>App Deployment Result and Evaluation </h2>
 <ul>
   <li><b>1. Weighted Rating Result</b></li>
   <img src="https://github.com/jvontama96/Airbnb_RecommendationSystem/blob/main/Recommendation_Result/Result_1.png?raw=true" alt="Weighted Rating Result" style="width:100%; max-width:600px;">
