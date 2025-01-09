@@ -79,13 +79,14 @@ with tabs[0]:
 
     # Title for the app
     st.image("banner.png")
-    
-  st.info('''
+
+    st.info('''
     ## Short Description  
     Hotel Booking App based on Airbnb data to simulate a Recommendation System using a K-means clustering model and predict prices for new listings using a Random Forest model. Recommends optimal prices to hotel owners for their newly input listings.  
-    
+
     [View Full Repository](https://github.com/jvontama96/Airbnb_RecommendationSystem/tree/main)
     ''')
+
 
     # Recommendation Flow Chart
     st.markdown(
