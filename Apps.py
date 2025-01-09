@@ -81,16 +81,13 @@ with tabs[0]:
     st.image("banner.png")
 
     st.markdown('''
-    <div style="font-size:24px; background-color:#e9f5ff; padding:10px; border-radius:5px;">
+    <div style="font-size:20x; background-color:#e9f5ff; padding:10px; border-radius:5px;">
     <strong>Hotel Booking App</strong> based on Airbnb data to simulate a Recommendation System using a K-means clustering model and predict prices for new listings using a Random Forest model. Recommends optimal prices to hotel owners for their newly input listings.<br><br>
     <a href="https://github.com/jvontama96/Airbnb_RecommendationSystem/tree/main" style="color:#1a73e8;" target="_blank">View Full Repository</a>
     </div>
     ''', unsafe_allow_html=True)
 
     
-
-
-
     # Recommendation Flow Chart
     st.markdown(
         """
