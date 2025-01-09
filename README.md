@@ -1,4 +1,4 @@
-<h1 align="center">Airbnb Hotel Booking and Price Recommendation System </h1>
+<h1> Airbnb Hotel Booking and Price Recommendation System </h1>
 
 <p align="left">
 This project uses data from the Airbnb platform, scraped and uploaded to Kaggle, with a total of 12,932 rows. It focuses on developing a recommendation system for Airbnb listings by combining weighted ratings, content-based filtering, and clustering models using KMeans. Additionally, a Random Forest model is used to recommend prices for newly added listings. The goal is to provide personalized recommendations based on user preferences and listing characteristics.
